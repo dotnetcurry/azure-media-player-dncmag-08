@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="AzureMediaPlayer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AzureMediaPlayer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mmppf="using:Microsoft.PlayerFramework"
+    xmlns:adaptive="using:Microsoft.PlayerFramework.Adaptive"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <mmppf:MediaPlayer AutoPlay="True" IsFullScreenVisible="True" 
+                           IsSignalStrengthVisible="True" IsResolutionIndicatorVisible="True"
+                           Source="http://mediaservicedemo.origin.mediaservices.windows.net/9be30671-d87e-4f41-8020-223b7c084e76/pacific_rim_60_seconds.ism/manifest">
+            <mmppf:MediaPlayer.Plugins>
+                <adaptive:AdaptivePlugin />
+            </mmppf:MediaPlayer.Plugins>
+        </mmppf:MediaPlayer>
+    </Grid>
+</Page>
